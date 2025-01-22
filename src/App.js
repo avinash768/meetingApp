@@ -8,7 +8,8 @@ import ViewMeeting from "./components/ViewMeeting";
 
 function App() {
   return (
-    <Router>
+  
+   <Router>
       <div className="min-h-screen bg-gray-50 text-gray-800">
         {/* Navigation Bar (Optional) */}
         <nav className="bg-white shadow-md p-4">
@@ -21,8 +22,11 @@ function App() {
               <a href="/calendar" className="text-gray-600 hover:text-purple-600">
                 Calendar
               </a>
-              <a href="/add-meeting" className="text-gray-600 hover:text-purple-600">
+              <a href="/addmeeting" className="text-gray-600 hover:text-purple-600">
                 Add Meeting
+              </a>
+              <a href="/viewmeeting" className="text-gray-600 hover:text-purple-600">
+                View Meetings
               </a>
             </div>
           </div>
@@ -32,9 +36,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/calendar" element={<Calendar />} />
-          <Route path="/add-meeting" element={<Meetings />} />
-          <Route path="/view-meeting/:id" element={<ViewMeeting />} />
-          <Route path="/Add-meeting/:id" element={<AddMeeting />} />
+          <Route path="/addmeeting" element={<AddMeeting/>} />
+          <Route path="/viewmeeting" element={<ViewMeeting />} />
+          <Route path="/addmeeting" element={<AddMeeting />} />
         </Routes>
       </div>
     </Router>
